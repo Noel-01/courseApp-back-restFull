@@ -7,13 +7,14 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.byBatis.courses.dto.CursoRequestDto;
 import com.byBatis.courses.dto.CursoResponseDto;
 import com.byBatis.courses.repositoris.CursoRepository;
 
 
 
 @Service
-public class CursoServiceImpl {
+public class CursoServiceImpl implements ICursoService {
 
 	@Autowired
 	private CursoRepository cursoRepository;
@@ -40,6 +41,30 @@ public class CursoServiceImpl {
 //		}
 		
 	//	return cursoRespDto;
+	}
+
+	@Override
+	public CursoResponseDto save(CursoRequestDto request) {
+		//cursoRepository.save(request);
+		return null;
+	}
+
+	@Override
+	public CursoResponseDto getById(Long request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CursoResponseDto update(CursoRequestDto request, Long cursoId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long cursoId) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
