@@ -43,7 +43,7 @@ public class SwaggerConfig {
                .globalResponseMessage(RequestMethod.POST, responseMessages)
                .globalResponseMessage(RequestMethod.DELETE, responseMessages)
                .globalResponseMessage(RequestMethod.PUT, responseMessages).apiInfo(apiInfo()).select()
-               .apis(RequestHandlerSelectors.basePackage("com.example.controllers"))
+               .apis(RequestHandlerSelectors.basePackage("com.byBatis.courses.controllers"))
                .paths(PathSelectors.any()).build();
    }
 
@@ -53,6 +53,6 @@ public class SwaggerConfig {
     * @return the api info
     */
    private ApiInfo apiInfo() {
-       return new ApiInfoBuilder().title("APIs Demo Swagger").build();
+       return new ApiInfoBuilder().title("APIss Demo Swagger").build();
    }
 }
