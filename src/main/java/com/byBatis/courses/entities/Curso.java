@@ -35,7 +35,7 @@ public class Curso {
 	@Column(name="level")
 	private String level;
 	
-	@Column(name="numberOfHours")
+	@Column(name="number_of_hours")
 	private int numberOfHours;
 	
 	@Column(name="state")

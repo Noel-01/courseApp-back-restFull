@@ -1,7 +1,5 @@
 package com.byBatis.courses.dto;
 
-import com.byBatis.courses.entities.Profesor;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -26,5 +24,5 @@ public class CursoResponseDto {
 	
 	private Boolean state;
 	
-	private Profesor nombreProfesor;
+	private ProfesorResponseDto profesor;
 }

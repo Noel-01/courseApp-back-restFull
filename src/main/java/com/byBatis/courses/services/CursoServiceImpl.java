@@ -24,7 +24,7 @@ public class CursoServiceImpl implements ICursoService {
 
 	public List<CursoResponseDto> getAll() {
 		return cursoRepository.findAll().stream()
-				.map(curso -> CursoResponseDto.class.cast(modelMapper.map(curso, CursoResponseDto.class)))
+				.map(curso -> modelMapper.map(curso, CursoResponseDto.class))
 				.collect(Collectors.toList());
 	}
 

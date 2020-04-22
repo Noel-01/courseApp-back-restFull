@@ -56,10 +56,9 @@ public class CursoController {
 		return new ResponseEntity<CursoResponseDto>(cursoService.update(request, cursoId), HttpStatus.OK);
 	}
 	
-	@DeleteMapping(value = "borrar/{cursoId}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@DeleteMapping(value = "borrar/{cursoId}")
 	@ApiOperation(value = "Borrar un curso")
-	public ResponseEntity<?> delete(
-			@PathVariable Long cursoId){
+	public ResponseEntity<?> delete(@PathVariable Long cursoId){
 		cursoService.delete(cursoId);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
