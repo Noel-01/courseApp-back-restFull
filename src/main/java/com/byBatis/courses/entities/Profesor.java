@@ -37,6 +37,6 @@ public class Profesor {
 	
 	// Esto funciona porque estoy utilizando los DTO para los mapeos si no hay que ver 
 	// como hacer para que no de recursividad infinita (stack over flow)
-	@OneToMany(mappedBy="profesor", cascade = CascadeType.ALL)
-	private Set<Curso> cursos = new HashSet<>();
+//	@OneToMany(mappedBy="profesor", cascade = CascadeType.ALL)
+//	private Set<Curso> cursos = new HashSet<>();
 }

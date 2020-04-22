@@ -12,16 +12,16 @@ public class SpringWebSecurityConfiguration implements WebMvcConfigurer {
 //	@Value("${rutas.cors}")
 //	private String cors;
 
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "HEAD");
-//				registry.addMapping("/rest").allowedOrigins(cors).allowedMethods("GET");
-			}
-		};
-	}
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurer() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "HEAD");
+////				registry.addMapping("/rest").allowedOrigins(cors).allowedMethods("GET");
+//			}
+//		};
+//	}
 
 	@Bean
 	public ModelMapper modelMapper() {
