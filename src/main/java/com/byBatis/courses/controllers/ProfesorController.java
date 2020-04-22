@@ -16,19 +16,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.byBatis.courses.dto.ProfesorRequestDto;
 import com.byBatis.courses.dto.ProfesorResponseDto;
-import com.byBatis.courses.services.ProfesorServiceImpl;
+import com.byBatis.courses.services.IProfesorService;
 
 @RestController
 //@CrossOrigin(origins = "*")
 @RequestMapping("profesores")
 public class ProfesorController {
 	
+
 	@Autowired
-	private ProfesorServiceImpl profesorService;
+	private IProfesorService profesorService;
 
 	@GetMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<ProfesorResponseDto>> getAll(){
 		return new ResponseEntity<List<ProfesorResponseDto>>(profesorService.getAll(), HttpStatus.OK);
+	}
+	
+	@GetMapping(value = "/obtener/{profesorId}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ProfesorResponseDto> getById(
+			@PathVariable Long profesorId){
+		return new ResponseEntity<ProfesorResponseDto>(profesorService.getById(profesorId), HttpStatus.OK);
 	}
 	
 	@PostMapping(value="", consumes = MediaType.APPLICATION_JSON_VALUE)
